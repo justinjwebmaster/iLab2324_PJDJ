@@ -1,0 +1,11 @@
+<a class="relative h-96 w-full rounded-xl overflow-hidden" href="projet.php?id={{ projet.id }}">
+  <img src="../datas/fr/img/{{ projet.img1 }}" alt="Background Image" class="w-full h-full object-cover rounded-xl">
+
+  <!-- Dégradé sur le tiers inférieur de la carte -->
+  <div class="absolute bottom-0 w-full h-2/3 bg-gradient-to-t from-black to-transparent"></div>
+
+  <div class="absolute bottom-4 left-4">
+    <h2 class="text-4xl text-white font-bold">{{ projet.nom }}</h2>
+    <p class="text-xl text-red-500">{{ realisateur }}</p>
+  </div>
+</a>

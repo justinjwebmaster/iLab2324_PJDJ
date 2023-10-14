@@ -1,0 +1,23 @@
+<div class="container mx-auto">
+  <div class="grid grid-cols-3 gap-10 m-10">
+
+    {% for projet in projetsSim %}
+
+      {% for real in students %}
+
+        {% if real.id == projet.etudiants %}
+
+          {% set realisateur = real.nom %}
+
+          {% include 'partials/projectCard.twig' %}
+
+        {% endif %}
+
+      {% endfor %}
+
+    {% endfor %}
+
+
+
+  </div>
+</div>

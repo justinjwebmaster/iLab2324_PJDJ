@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "nom": "Justin Willemet",
+    "photo": "justinwillemet.png",
+    "description": "Bla bla bla, bla bla bla",
+    "option": "dwt",
+    "fb": "https://facebook.com/jwebmaster",
+    "inst": "https://instagram.com/jwebmaster.official",
+    "linkedin": "",
+    "artstation": "",
+    "site": "https://jwebmaster.com",
+    "autres": "https://justin.willemet.be"
+  },
+  {
+    "id": 2,
+    "nom": "Pina Vetrano",
+    "photo": "",
+    "description": "Bla bla bla, bla bla bla",
+    "option": "",
+    "fb": "",
+    "inst": "",
+    "linkedin": "",
+    "artstation": "",
+    "site": "",
+    "autres": ""
+  }
+]

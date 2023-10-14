@@ -1,0 +1,26 @@
+[
+  {
+    "id": "dwt",
+    "nom": "Design Web & Transmédia",
+    "site": "",
+    "logo": ""
+  },
+  {
+    "id": "jv",
+    "nom": "Jeux Vidéo",
+    "site": "",
+    "logo": ""
+  },
+  {
+    "id": "anim3d",
+    "nom": "Animation 3D",
+    "site": "",
+    "logo": ""
+  },
+  {
+    "id": "medea",
+    "nom": "Je sais plus",
+    "site": "",
+    "logo": ""
+  }
+]

@@ -1,0 +1,36 @@
+{% extends 'base.twig' %}
+
+{% block page_title %}
+
+  {{ title }}
+
+{% endblock %}
+
+
+{% block content %}
+
+  <h1 class="text-2xl">{{ title }}</h1>
+<div class="container mx-auto">
+  <div class="grid grid-cols-3 gap-10 m-10">
+
+    {% for projet in projets %}
+
+      {% for real in students %}
+
+        {% if real.id == projet.etudiants %}
+
+          {% set realisateur = real.nom %}
+
+          {% include 'partials/projectCard.twig' %}
+
+        {% endif %}
+
+      {% endfor %}
+
+
+    {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nom": "Willemet",
+    "prenom": "Justin",
+    "photo": "justinwillemet.png",
+    "description": "",
+    "option": "dwt",
+    "fb": "https://facebook.com/jwebmaster",
+    "inst": "https://instagram.com/jwebmaster.official",
+    "linkedin": "",
+    "artstation": "",
+    "site": "https://jwebmaster.com",
+    "autres": "https://justin.willemet.be"
+  },
+  {
+    "id": 2,
+    "nom": "Vetrano",
+    "prenom": "pina",
+    "photo": "",
+    "description": "",
+    "option": "",
+    "fb": "",
+    "inst": "",
+    "linkedin": "",
+    "artstation": "",
+    "site": "",
+    "autres": ""
+  }
+]
