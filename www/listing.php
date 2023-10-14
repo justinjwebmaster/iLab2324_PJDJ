@@ -1,11 +1,10 @@
 <?php
 session_start();
-if($_SESSION['lang'] == ""){
+if($_SESSION['lang'] == "en"){
   $_SESSION['lang'] = 'fr';
 }
 $lang = $_SESSION['lang'];
 
-var_dump($lang);
 
 require_once 'includes/functions.php';
 
