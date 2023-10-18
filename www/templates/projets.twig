@@ -30,9 +30,34 @@
     <!-- Text Info -->
     <div class="absolute bottom-4 left-4">
       <h1 class="text-6xl text-white font-bold mb-2">{{ projet.nom }}</h1>
-      <p class="text-xl text-red-500">Réalisé par : {{ studentName }}</p>
+      <p class="text-xl text-red-500 flex">Réalisé par :
+        {% set i = 1 %}
+        {% for currentStudent in allCurrentStudents %}
+          {% if i < allCurrentStudents|length %}
+            <span>{{ currentStudent.nom }} | </span>
+          {% else %}
+            <span>{{ currentStudent.nom }}</span>
+          {% endif %}
+          {% set i = i + 1 %}
+        {% endfor %}
+      </p>
     </div>
   </section>
+
+
+  <p class="text-xl text-red-500 flex">Réalisé par :
+    {% for currentStudent in allCurrentStudents %}
+      {% if i < allCurrentStudents|length %}
+        <span>{{ currentStudent.nom }} | </span>
+      {% else %}
+        <span>{{ currentStudent.nom }}</span>
+      {% endif %}
+      {% set i = i + 1 %}
+    {% endfor %}
+  </p>
+
+  <h2>Video</h2>
+  <iframe width="560" height="315" src="{{ projet.video }}" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
   {% set message = botMessage['description'] %}

@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./www/**/*.{html,php,twig,js,css}', './www/**/**/*.{html,php,twig,js,css}' ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary': '#66CDAA',
+      }
+    },
   },
   plugins: [],
 }

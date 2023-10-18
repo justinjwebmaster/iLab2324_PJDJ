@@ -29,6 +29,17 @@ foreach($projets as $projetSim) {
 
 $students = connectJson('etudiants', $_SESSION['lang']);
 
+
+$chaineStudent = $display['etudiants'];
+$allStudentProjet = explode(',', $chaineStudent);
+
+$studentDisplay = [];
+foreach($students as $student) {
+  if (in_array($student['id'], $allStudentProjet)) {
+    $studentDisplay[] = $student;
+  }
+}
+
 $curentStudent = null;
 foreach($students as $student) {
   if ($student['id'] == $display['etudiants']) {
@@ -58,7 +69,9 @@ $tpl_data = [
   'qrImg' => $qrImageUrl,
   'projetsSim' => $projetsSim,
   'students' => $students,
+  'allCurrentStudents' => $studentDisplay
 ];
 
 
 echo $template->render($tpl_data);
+

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['lang'] == "en"){
+if($_SESSION['lang'] == ""){
   $_SESSION['lang'] = 'fr';
 }
 $lang = $_SESSION['lang'];
@@ -24,5 +24,15 @@ $tpl_data = [
   'students' => $students,
 
 ];
+foreach ($projets as $project) {
+  echo "Nom du projet : " . $project["nom"] . "<br>";
+}
 
 echo $template->render($tpl_data);
+
+?>
+
+<div class="text-2xl flex">
+  <h1>test</h1>
+  <h1>Tester</h1>
+</div>
