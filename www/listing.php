@@ -5,7 +5,6 @@ if($_SESSION['lang'] == ""){
 }
 $lang = $_SESSION['lang'];
 
-var_dump($lang);
 
 require_once 'includes/functions.php';
 
@@ -18,12 +17,29 @@ shuffle($projets);
 
 $template = $twig->load('listing.twig');
 
+
+foreach ($projets as $key => $projet) {
+  $desiredIds = explode(',', $projet['etudiants']);
+  $filteredStudents = [];
+
+  foreach ($students as $student) {
+    if (in_array($student['id'], $desiredIds)) {
+      $filteredStudents[] = $student;
+    }
+  }
+
+  // Associez les étudiants filtrés au projet correspondant.
+  $projets[$key]['filteredStudents'] = $filteredStudents;
+}
+
 $tpl_data = [
   'title' => 'Test listing projet',
   'lang' => $lang,
   'projets' => $projets,
-  'students' => $students,
-
+  'filteredStudents' => $filteredStudents,
 ];
 
+
 echo $template->render($tpl_data);
+
+?>

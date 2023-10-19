@@ -1,11 +1,11 @@
-<div class="max-w-sm mx-auto bg-white rounded-xl shadow-lg p-6 space-y-4">
+<div class="max-w-sm mx-auto mt-12 bg-white rounded-xl shadow-lg p-6 space-y-4">
   <!-- Photo de profil -->
   <div class="flex justify-center">
-    <img src="xx" alt="Amaury Sellier" class="w-32 h-32 rounded-full border-2 border-gray-200">
+    <img src="datas/etudiantsImage/{{ student.photo }}" alt="Amaury Sellier" class="w-32 h-32 rounded-full border-2 border-gray-200">
   </div>
 
   <!-- Nom -->
-  <h2 class="text-center text-xl font-semibold">{{ studentName }}</h2>
+  <h2 class="text-center text-xl font-semibold">{{ student.nom }}</h2>
 
   <!-- Description -->
   <p class="text-center text-gray-700">
@@ -14,7 +14,7 @@
 
   <!-- QR Code -->
   <div class="flex justify-center mt-4">
-    <img src="{{ qrImg }}" alt="QR Code" class="w-32 h-32">
+    <img src="{{ student.qrImage }}" alt="QR Code du site de {{ student.nom }}" class="w-32 h-32">
   </div>
 
 </div>
