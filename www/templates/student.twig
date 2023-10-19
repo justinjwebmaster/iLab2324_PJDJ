@@ -1,0 +1,33 @@
+{% extends 'base.twig' %}
+
+{% block page_title %}
+
+  {{ title }}
+
+{% endblock %}
+
+
+{%  block content %}
+
+  <img src="datas/etudiantsImage/{{ student.photo }}" alt="{{ student.nom }}">
+
+  <h1>{{ student.nom }}</h1>
+  <h2>{{ studentOption.nom }}</h2>
+
+  <p> {{ student.description }}</p>
+
+  <a href="{{ student.site }}">{{ student.site }}</a>
+  <br>
+  <a href="{{ student.fb }}">{{ student.fb }}</a>
+  <br>
+  <a href="{{ student.linkedin }}">{{ student.linkedin }}</a>
+  <br>
+  <a href="{{ student.inst }}">{{ student.inst }}</a>
+  <br>
+  <a href="{{ student.artstation }}">{{ student.artstation }}</a>
+  <br>
+  <a href="{{ student.autres }}">{{ student.autres }}</a>
+
+
+{% endblock %}
+
