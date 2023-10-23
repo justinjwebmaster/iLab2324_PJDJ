@@ -15,13 +15,13 @@
     <img src="../datas/{{ lang }}/img/{{ projet.img1 }}" alt="Project Image" class="w-full h-full object-cover">
 
     <!-- Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+    <div class=" inset-0 bg-gradient-to-t from-black to-transparent"></div>
 
     <!-- Return Button -->
-    <a href="#" class="absolute top-4 left-4 bg-red-500 text-white py-2 px-6 rounded-lg">Retour</a>
+    <a href="#" class="btn__retour top-4 left-4 bg-red-500 text-white py-2 px-6 rounded-lg">Retour</a>
 
     <!-- Play Button (using SVG for the play triangle) -->
-    <button class="absolute inset-0 w-16 h-16 mx-auto my-auto">
+    <button class="btn__play inset-0 w-16 h-16 mx-auto my-auto">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 2L6 22 18 12 6 2z"></path>
       </svg>
@@ -44,9 +44,9 @@
   {% include 'partials/auteurCard.twig' %}
 
   {% include 'partials/projetSimilaire.twig' %}
-
-  <a href="listing.php" class="bg-red-500 text-white py-2 px-6 rounded-lg">Retour à la HOME</a>
-
+<div class="btn__backHome">
+  <a href="listing.php" class="bg-red-500  text-white py-2 px-6 rounded-lg">Retour à la HOME</a>
+</div>
 
 {% endblock %}
 
