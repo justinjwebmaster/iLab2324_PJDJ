@@ -25,18 +25,7 @@ hey salut moi c'est bla bla bla
 
     {% for projet in projets %}
 
-      {% for real in students %}
-
-        {% if real.id == projet.etudiants %}
-
-          {% set realisateur = real.nom %}
-
-          {% include 'partials/projectCard.twig' %}
-
-        {% endif %}
-
-      {% endfor %}
-
+      {% include 'partials/projectCard.twig' %}
 
     {% endfor %}
 

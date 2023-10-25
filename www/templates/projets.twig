@@ -18,7 +18,11 @@
     <div class=" inset-0 bg-gradient-to-t from-black to-transparent"></div>
 
     <!-- Return Button -->
+<<<<<<< HEAD
     <a href="#" class="btn__retour top-4 left-4 bg-red-500 text-white py-2 px-6 rounded-lg">Retour</a>
+=======
+    <a href="listing.php" class="absolute top-4 left-4 bg-red-500 text-white py-2 px-6 rounded-lg">Retour</a>
+>>>>>>> 15ddcd29d8d42db919ce0dbfcc0d66e9625c0367
 
     <!-- Play Button (using SVG for the play triangle) -->
     <button class="btn__play inset-0 w-16 h-16 mx-auto my-auto">
@@ -30,18 +34,42 @@
     <!-- Text Info -->
     <div class="absolute bottom-4 left-4">
       <h1 class="text-6xl text-white font-bold mb-2">{{ projet.nom }}</h1>
-      <p class="text-xl text-red-500">Réalisé par : {{ studentName }}</p>
+      <p class="text-xl text-red-500 flex"><span>Réalisé par : </span>
+        {% set i = 1 %}
+        {% for currentStudent in allCurrentStudents %}
+          {% if i < allCurrentStudents|length %}
+            <span>{{ currentStudent.nom }} | </span>
+          {% else %}
+            <span>{{ currentStudent.nom }}</span>
+          {% endif %}
+          {% set i = i + 1 %}
+        {% endfor %}
+      </p>
     </div>
   </section>
 
 
-  {% set message = botMessage['description'] %}
-  {% include 'partials/botleft.twig' %}
+  {% if projet.video != null %}
+    <h2>Video</h2>
+    <iframe width="560" height="315" src="{{ projet.video }}" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  {% endif %}
 
-  {% set message = botMessage['infoSup'] %}
-  {% include 'partials/botleft.twig' %}
+  {% if botMessage['description'] != null %}
+    {% set message = botMessage['description'] %}
+    {% include 'partials/botleft.twig' %}
+  {% endif %}
 
-  {% include 'partials/auteurCard.twig' %}
+  {% if botMessage['description'] != null %}
+    {% set message = botMessage['infoSup'] %}
+    {% include 'partials/botleft.twig' %}
+  {% endif %}
+
+
+
+  {% for student in allCurrentStudents %}
+    {% include 'partials/auteurCard.twig' %}
+  {% endfor %}
+
 
   {% include 'partials/projetSimilaire.twig' %}
 <div class="btn__backHome">
