@@ -1,11 +1,10 @@
-<a class="relative h-96 w-full rounded-xl overflow-hidden" href="projet.php?id={{ projet.id }}">
-  <img src="../datas/{{ lang }}/img/{{ projet.imgCard }}" alt="Background Image" class="w-full h-full object-cover rounded-xl">
+<a class="relative " href="projet.php?id={{ projet.id }}">
+  <img class="image__projets" src="../datas/{{ lang }}/img/{{ projet.imgCard }}" alt="Background Image" class="w-full h-full object-cover rounded-xl">
 
-  <div class="absolute bottom-0 w-full h-2/3 bg-gradient-to-t from-black to-transparent"></div>
 
-  <div class="absolute bottom-4 left-4">
-    <h2 class="text-4xl text-white font-bold">{{ projet.nom }}</h2>
-    <p class="text-xl text-primary flex"><span>Réalisé par : </span>
+  <div class="nom__projet ">
+    <h2 class="">{{ projet.nom }}</h2>
+    <p class=" "><span>Réalisé par : </span>
       {% for student in projet.filteredStudents %}
         {% if loop.last %}
           <span>{{ student.nom }}</span>

@@ -78,6 +78,6 @@ $tpl_data = [
   'allCurrentStudents' => $studentDisplay
 ];
 
-var_dump($studentDisplay);
+//var_dump($studentDisplay);
 echo $template->render($tpl_data);
 
