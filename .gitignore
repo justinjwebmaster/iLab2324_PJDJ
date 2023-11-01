@@ -1,4 +1,6 @@
 # Created by https://www.gitignore.io/api/sass,node,macos,windows,phpstorm,sublimetext,visualstudiocode
+.idea
+.vscode
 
 ### macOS ###
 # General
