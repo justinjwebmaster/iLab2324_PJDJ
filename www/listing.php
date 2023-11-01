@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['lang'] == ""){
+if(!isset($_SESSION['lang']) || $_SESSION['lang']== ""){
   $_SESSION['lang'] = 'fr';
 }
 $lang = $_SESSION['lang'];

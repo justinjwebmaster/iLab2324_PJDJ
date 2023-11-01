@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['lang'] == ""){
+if(!isset($_SESSION['lang']) || $_SESSION['lang']== ""){
   $_SESSION['lang'] = 'fr';
 }
 $lang = $_SESSION['lang'];
@@ -39,7 +39,7 @@ $allStudentProjet = explode(',', $display['etudiants']);
 $studentDisplay = [];
 foreach($students as $student) {
   if (in_array($student['id'], $allStudentProjet)) {
-    $url = $student['site'];
+    $url = "https://justin.willemet.be/projets/ilab/student.php?id=" . $student['id'];
     $student['qrImage'] = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" . urlencode($url);
     $studentDisplay[] = $student;
   }
