@@ -7,7 +7,6 @@
     "clean": "rimraf www/assets",
     "build": "npm run clean && npx mix --production",
     "start": "npx mix watch",
-    "tailwind": "npx tailwindcss -i ./src/styles/tailwind/input.css -o ./www/assets/styles/tailwind.css --watch",
     "watch": "npx mix watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
