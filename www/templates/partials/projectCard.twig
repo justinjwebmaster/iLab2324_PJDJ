@@ -1,10 +1,10 @@
-<a class="relative " href="projet.php?id={{ projet.id }}">
-  <img class="image__projets" src="datas/{{ lang }}/img/{{ projet.imgCard }}" alt="Background Image" class="w-full h-full object-cover rounded-xl">
+<a class="relative projectCard {{ projet.pattern }}" href="projet.php?id={{ projet.id }}">
+  <img class="projectCard__img image__projets" src="datas/{{ lang }}/img/{{ projet.imgCard }}" alt="Background Image">
 
 
-  <div class="nom__projet ">
-    <h2 class="">{{ projet.nom }}</h2>
-    <p class=" "><span>Réalisé par : </span>
+  <div class="nom__projet projectContent">
+    <h2 class="projectContent__title">{{ projet.nom }}</h2>
+    <p class="projectContent__reals"><span>Réalisé par : </span>
       {% for student in projet.filteredStudents %}
         {% if loop.last %}
           <span>{{ student.nom }}</span>

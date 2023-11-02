@@ -1,10 +1,11 @@
 @import 'utils/variables';
 @import 'components/type';
+@import 'components/projectCard';
 @import '../../node_modules/modern-normalize/modern-normalize.css';
 
 
 body{
-    background-image: url(../images/background.svg);
+    // background-image: url(../images/background.svg);
     background-size: contain;
     font-size: 28px;
 }
@@ -50,7 +51,7 @@ header{
 
 
 
-
+/*
 // page listing
 
 .image__projets{
@@ -121,6 +122,7 @@ img {
 
 
 }
+*/
 
 
 
