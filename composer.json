@@ -1,0 +1,11 @@
+{
+    "name": "jolico/i-lab2324_pjdj",
+    "autoload": {
+        "psr-4": {
+            "Jolico\\ILab2324Pjdj\\": "src/"
+        }
+    },
+    "require": {
+        "twig/twig": "^3.7"
+    }
+}

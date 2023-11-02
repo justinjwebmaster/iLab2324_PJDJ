@@ -1,0 +1,22 @@
+
+
+<div class="container__auteur ">
+  <!-- Photo de profil -->
+  <div class="image__auteur ">
+    <img src="datas/etudiantsImage/{{ student.photo }}" alt="Amaury Sellier" class="w-32 h-32 rounded-full border-2 border-gray-200">
+  </div>
+
+  <!-- Nom -->
+  <h2 class="nom__auteur ">{{ student.nom }}</h2>
+
+  <!-- Description -->
+  <p class="text__auteur ">
+    {{student.description}}
+  </p>
+
+  <!-- QR Code -->
+  <div class="container__qrCode ">
+    <img src="{{ student.qrImage }}" alt="QR Code du site de {{ student.nom }}" class="w-32 h-32">
+  </div>
+
+</div>
