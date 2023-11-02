@@ -59,6 +59,12 @@
       justify-content: start;
       align-items: center;
       font-size: 24px;
+      line-height: 120%;
+    }
+
+    &__option{
+      color: #F45D01;
+      font-weight: 900;
     }
   }
 }

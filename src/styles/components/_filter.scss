@@ -1,0 +1,61 @@
+.filters{
+  position: fixed;
+  height: fit-content;
+  z-index: 1000;
+  background-color: #333232;
+  border-radius: 20px;
+  padding: 10px;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+
+  &__form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+  }
+  &__filter{
+    flex-shrink: 0;
+  }
+
+  /* Cache la case à cocher réelle */
+  .hidden-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+
+  }
+
+  /* Style du bouton */
+  .custom-button {
+    display: inline-block;
+    padding: 6px 18px;
+    background-color: #333232;
+    border: 2px solid #F45D01;
+    color: #F45D01;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .custom-button:hover {
+    background-color: #F45D01;
+    color: #333232;
+  }
+
+  /* Changez l'apparence du bouton lorsque la case à cocher est cochée */
+  .hidden-checkbox:checked + .custom-button {
+    background-color: #F45D01;
+    color: #333232;
+  }
+}

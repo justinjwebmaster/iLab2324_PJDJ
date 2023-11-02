@@ -12,7 +12,7 @@
 <div class="icone__botBienvenue">
 <img src="assets/images/description_bot.png" alt="icone bot bienvenue" srcset="">
 </div>
-<div class="bulle__message bg-blue-500 ">
+<div class="bulle__message">
   Salut, moi c’est <span class="nom__bot title"> NO-ID </span>
   Touche un projet et je t’apprendrai tout ce dont tu as besoin de savoir !
 </div>
@@ -33,11 +33,13 @@
   </div>
 </div>
 
-  <form action="/listing.php" method="GET" name="formFilter" id="formFilter">
+<div class="filters">
+  <form action="/listing.php" method="GET" name="formFilter" id="formFilter" class="filters__form">
     {% for option in options %}
       {% include 'partials/optionFilter.twig' %}
     {% endfor %}
   </form>
+</div>
 
 
 
