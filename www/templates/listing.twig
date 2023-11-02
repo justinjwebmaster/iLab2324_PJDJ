@@ -33,4 +33,12 @@
   </div>
 </div>
 
+  <form action="/listing.php" method="GET" name="formFilter" id="formFilter">
+    {% for option in options %}
+      {% include 'partials/optionFilter.twig' %}
+    {% endfor %}
+  </form>
+
+
+
 {% endblock %}

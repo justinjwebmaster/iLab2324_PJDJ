@@ -5,6 +5,12 @@ if(!isset($_SESSION['lang']) || $_SESSION['lang']== ""){
 }
 $lang = $_SESSION['lang'];
 
+if(isset($_GET['type'])){
+  $selectedTypes = $_GET['type'];
+} else {
+  $selectedTypes = [];
+}
+
 
 require_once 'includes/functions.php';
 
@@ -12,6 +18,7 @@ $twig = getTwigInstance();
 
 $projets = connectJson("projets", $_SESSION['lang']);
 $students = connectJson('etudiants', $_SESSION['lang']);
+$options = connectJson('options', $_SESSION['lang']);
 
 shuffle($projets);
 
@@ -32,11 +39,21 @@ foreach ($projets as $key => $projet) {
   $projets[$key]['filteredStudents'] = $filteredStudents;
 }
 
+$filteredProjets = [];
+
+foreach ($projets as $projet) {
+  if (empty($selectedTypes) || in_array($projet['option'], $selectedTypes)) {
+    $filteredProjets[] = $projet;
+  }
+}
+
 $tpl_data = [
   'title' => 'Test listing projet',
   'lang' => $lang,
-  'projets' => $projets,
+  'projets' => $filteredProjets,  // Changez cette ligne pour utiliser $filteredProjets
   'filteredStudents' => $filteredStudents,
+  'options' => $options,
+  'selectedTypes' => $selectedTypes
 ];
 
 
