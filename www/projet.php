@@ -15,6 +15,7 @@ $twig = getTwigInstance();
 // connexion json
 $projets = connectJson("projets", $_SESSION['lang']);
 $students = connectJson('etudiants', $_SESSION['lang']);
+$options = connectJson('options', $_SESSION['lang']);
 
 $display =[];
 // recuper le projet à afficher et faire un tableau avec ses infos
@@ -75,7 +76,8 @@ $tpl_data = [
   ],
   'projetsSim' => $projetsSim,
   'students' => $students,
-  'allCurrentStudents' => $studentDisplay
+  'allCurrentStudents' => $studentDisplay,
+  'options' => $options,
 ];
 
 //var_dump($studentDisplay);

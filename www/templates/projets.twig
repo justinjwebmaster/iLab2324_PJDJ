@@ -10,29 +10,27 @@
 {%  block content %}
 
   <!-- Project Banner -->
-  <section class="relative ">
+  <section class="relative projectBanner">
     <!-- Image -->
-    <img class="image__projets" src="../datas/{{ lang }}/img/{{ projet.img1 }}" alt="Project Image" class="w-full h-full object-cover">
+    <img class="projectBanner__img" src="../datas/{{ lang }}/img/{{ projet.img1 }}" alt="Project Image" class="w-full h-full object-cover">
 
     <!-- Gradient Overlay -->
     <div class=" "></div>
 
     <!-- Return Button -->
 
-    <a href="listing.php" class="btn btn__retour  ">Retour</a>
+    <a href="listing.php" class="btn btn__retour  projectBanner__btn">Retour</a>
 
 
-    <!-- Play Button (using SVG for the play triangle) -->
-    <button class="btn__play ">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 2L6 22 18 12 6 2z"></path>
-      </svg>
-    </button>
+    <!-- Play Button (using SVG for the play triangle) si video est présente dans le projet-->
+    {% if projet.video != "" %}
+      <svg class="btn__play projectBanner__playBtn" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" color="#F45D01" stroke-width="1.5"><path d="M6.90588 4.53682C6.50592 4.2998 6 4.58808 6 5.05299V18.947C6 19.4119 6.50592 19.7002 6.90588 19.4632L18.629 12.5162C19.0211 12.2838 19.0211 11.7162 18.629 11.4838L6.90588 4.53682Z" fill="#F45D01" stroke="#F45D01" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    {% endif %}
 
     <!-- Text Info -->
-    <div class="nom__projet ">
-      <h1 class="">{{ projet.nom }}</h1>
-      <p class=""><span>Réalisé par : </span>
+    <div class="nom__projet projectBanner__content">
+      <h1 class="projectBanner__contentTitle">{{ projet.nom }}</h1>
+      <p class="">
         {% set i = 1 %}
         {% for currentStudent in allCurrentStudents %}
           {% if i < allCurrentStudents|length %}
@@ -42,18 +40,26 @@
           {% endif %}
           {% set i = i + 1 %}
         {% endfor %}
+
+        <span> </span>
+
+        {% for option in options %}
+          {% if option.id == projet.option %}
+            <span class="projectBanner__option">{{ option.nom }} </span>
+          {% endif %}
+        {% endfor %}
       </p>
     </div>
   </section>
 
- 
+
     {% if projet.video != null %}
     <iframe class="container__video"  src="{{ projet.video }}" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   {% endif %}
 
 
- 
- 
+
+
 
 
   {% if botMessage['description'] != null %}

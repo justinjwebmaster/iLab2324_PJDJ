@@ -2,6 +2,7 @@
 @import 'components/type';
 @import 'components/projectCard';
 @import 'components/filter';
+@import 'components/projectDetails';
 @import '../../node_modules/modern-normalize/modern-normalize.css';
 
 
@@ -14,7 +15,7 @@ body{
 }
 
 main{
-    padding: 20px;
+    // padding: 20px;
 }
 
 *{
@@ -24,7 +25,7 @@ main{
 
 // header
 
-
+/*
 header{
 
     display: grid;
@@ -51,6 +52,8 @@ header{
     position: relative;
     left: 140px;
 }
+
+ */
 
 
 
@@ -131,7 +134,7 @@ img {
 
 // projets id description realisateur
 
-
+/*
 // page projets
 
 
@@ -300,40 +303,8 @@ footer {
     margin-top: 50px;
 }
 
+ */
 
-// form FILTER
-/* Cache la case à cocher réelle */
-.hidden-checkbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
 
-}
-
-/* Style du bouton */
-.custom-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.custom-button:hover {
-  background-color: #0056b3;
-}
-
-/* Changez l'apparence du bouton lorsque la case à cocher est cochée */
-.hidden-checkbox:checked + .custom-button {
-  background-color: #34C924;
-}
 
 
