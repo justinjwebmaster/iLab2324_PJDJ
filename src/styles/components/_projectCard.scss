@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+  padding: 30px;
 
   /* Prend 1 colonne (1/12 de la largeur totale) */
   .one-col {
