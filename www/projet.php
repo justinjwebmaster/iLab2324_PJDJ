@@ -1,4 +1,10 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
 session_start();
 if(!isset($_SESSION['lang']) || $_SESSION['lang']== ""){
   $_SESSION['lang'] = 'fr';
@@ -60,11 +66,56 @@ foreach($students as $student) {
 $url = $curentStudent['site'];
 $qrImageUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" . urlencode($url); */
 
+$images = [];
+for ($i = 1; $i <= 6; $i++) {
+  if (!empty($display['img' . $i])) {
+    $images[] = ['url' => $display['img' . $i], 'class' => ''];
+  }
+}
+
+$count = count($images);
+$index = 0;
+$prev_pattern = null;
+
+function getNextPattern($prev) {
+  $patterns = ($prev == '13') ? ['31', '33'] : (($prev == '31') ? ['13', '33'] : ['13', '31']);
+  return $patterns[array_rand($patterns)];
+}
+
+while ($index < $count) {
+  $imagesLeft = $count - $index;
+  if ($imagesLeft >= 3) {
+    $pattern = getNextPattern($prev_pattern);
+  } elseif ($imagesLeft == 2) {
+    $pattern = '31';
+  } else {
+    $pattern = '33';
+  }
+
+  $prev_pattern = $pattern;
+
+  if ($pattern == '13' && $imagesLeft > 1) {
+    $images[$index]['class'] = 'one-col';
+    $index++;
+    $images[$index]['class'] = 'two-cols';
+    $index++;
+  } elseif ($pattern == '31' && $imagesLeft > 1) {
+    $images[$index]['class'] = 'two-cols';
+    $index++;
+    $images[$index]['class'] = 'one-col';
+    $index++;
+  } else {
+    $images[$index]['class'] = 'three-cols';
+    $index++;
+  }
+}
+
+
 
 $template = $twig->load('projets.twig');
 
 $tpl_data = [
-  'title' => 'Test listing projet',
+  'title' => $display['nom'] . ' – ' . $display['option'],
   'lang' => $lang,
   'projet' => $display,
   // 'studentName' => $studentName,
@@ -78,6 +129,7 @@ $tpl_data = [
   'students' => $students,
   'allCurrentStudents' => $studentDisplay,
   'options' => $options,
+  'images' => $images,
 ];
 
 //var_dump($studentDisplay);

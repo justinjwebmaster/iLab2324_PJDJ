@@ -1,23 +1,5 @@
 .listing{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
   padding: 30px;
-
-  /* Prend 1 colonne (1/12 de la largeur totale) */
-  .one-col {
-    grid-column: span 1;
-  }
-
-  /* Prend 2 colonnes (2/12 soit 1/6 de la largeur totale) */
-  .two-cols {
-    grid-column: span 2;
-  }
-
-  /* Prend 3 colonnes (3/12 soit 1/4 de la largeur totale) */
-  .three-cols {
-    grid-column: span 3;
-  }
 
   .projectCard{
     position: relative;

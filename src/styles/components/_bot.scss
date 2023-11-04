@@ -1,0 +1,26 @@
+.bot{
+  font-size: 24px;
+  position: relative;
+  z-index: 100;
+  // margin-left: 50%;
+  // transform: translateX(-50%);
+
+
+  &__icon{
+    width: 140px;
+    height: auto;
+    position: relative;
+    z-index: 100;
+  }
+
+  &__msg{
+    background-color: #FFF;
+    padding: 30px 20px;
+    border-radius: 20px;
+    position: relative;
+    margin-left: 80px;
+    width: 100%;
+    max-width: calc(100% - 20px - 80px - 30px);
+    margin-top: -45px
+  }
+}
