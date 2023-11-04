@@ -16,6 +16,7 @@ mix
   .copyDirectory('src/assets', 'www/assets')
   .copyDirectory('src/datas', 'www/datas')
   .js('src/scripts/app.js', 'www/assets/scripts/')
+  .js('src/scripts/player.js', 'www/assets/scripts/')
   .sass('src/styles/app.scss', 'assets/styles/')
   .options({
     processCssUrls: false,

@@ -1,5 +1,3 @@
-console.info('Hello world');
-
 // Sélectionnez toutes les checkboxes du formulaire
 const checkboxes = document.querySelectorAll('#formFilter input[type="checkbox"]');
 

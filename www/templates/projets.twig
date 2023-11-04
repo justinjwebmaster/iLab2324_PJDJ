@@ -1,5 +1,47 @@
 {% extends 'base.twig' %}
 
+{% block head__scripts %}
+  <!-- Mettez ceci dans la section <head> de votre document HTML -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script>
+    // Cette fonction doit être globale.
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', { // Assurez-vous que l'ID est le même que celui de votre iframe
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+      document.querySelector('.projectVideo').classList.add('projectVideo--hidden');
+    }
+
+    function onPlayerReady(event) {
+      var playButton = document.querySelector('.projectBanner__playBtn');
+      var projectVideo = document.querySelector('.projectVideo');
+      var hiddenClass = 'projectVideo--hidden';
+
+      playButton.addEventListener('click', function() {
+        projectVideo.classList.toggle(hiddenClass);
+        if (!projectVideo.classList.contains(hiddenClass)) {
+          player.playVideo();
+        } else {
+          player.pauseVideo();
+        }
+      });
+
+      projectVideo.addEventListener('click', function() {
+        projectVideo.classList.add(hiddenClass);
+        player.pauseVideo();
+      });
+    }
+  </script>
+
+{% endblock %}
+
+
+
+
 {% block page_title %}
 
   {{ title }}
@@ -52,10 +94,12 @@
     </div>
   </section>
 
-
+  <section class="projectVideo projectVideo--hidden">
     {% if projet.video != null %}
-    <iframe class="container__video"  src="{{ projet.video }}" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  {% endif %}
+      <iframe id="player" class="projectVideo__container" src="{{ projet.video ~ "&enablejsapi=1&controls=0&playerapiid=ytplayer" }}" title="YouTube video player | {{ projet.nom }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+    {% endif %}
+  </section>
+
 
 
 
