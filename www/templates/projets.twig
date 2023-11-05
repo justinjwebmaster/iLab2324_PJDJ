@@ -103,7 +103,7 @@
 
   <!-- Project Content -->
   <section class="projectContent">
-
+    <!-- DEscription + info supp -->
     <div class="projectContent--flex">
       {% if botMessage['description'] != null %}
         <div class="projectContent__content projectContent__content--middle">
@@ -123,7 +123,7 @@
       {% endif %}
     </div>
 
-
+    <!-- Images -->
     <div class="projectContent__content">
       <h3 class="projectContent__title ">{{ projet.nom }} en image</h3>
       <div class="projectContent__imgs grid">
@@ -137,17 +137,18 @@
       </div>
     </div>
 
+    <!-- Auteurs -->
     <h3 class=""> Auteurs </h3>
-    <ul class="liste">
+    <div class="auteur">
       {% for student in allCurrentStudents %}
         {% include 'partials/auteurCard.twig' %}
       {% endfor %}
-    </ul>
+    </div>
 
     <h3 class="title title--small grid__projet--marg">Projets smilaires</h3>
-    <ul class="liste">
+    <div class="liste">
       {% include 'partials/projetSimilaire.twig' %}
-    </ul>
+    </div>
   </section>
 
 

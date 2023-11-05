@@ -24,5 +24,57 @@
     "artstation": "artstation",
     "site": "https://justin.willemet.be",
     "autres": ""
+  },
+  {
+    "id": 3,
+    "nom": "Justin Willemet",
+    "photo": "stu1.jpeg",
+    "description": "Bla bla bla, bla bla bla",
+    "option": "dwt",
+    "fb": "https://facebook.com/jwebmaster",
+    "inst": "https://instagram.com/jwebmaster.official",
+    "linkedin": "lk",
+    "artstation": "art",
+    "site": "https://jwebmaster.be",
+    "autres": "https://justin.willemet.be"
+  },
+  {
+    "id": 4,
+    "nom": "Pina Vetrano",
+    "photo": "stu2.jpeg",
+    "description": "Ho Ho Ho Ho Ho Ho HO",
+    "option": "dwt",
+    "fb": "fb",
+    "inst": "instagram",
+    "linkedin": "lk",
+    "artstation": "artstation",
+    "site": "https://justin.willemet.be",
+    "autres": ""
+  },
+  {
+    "id": 5,
+    "nom": "Pina Vetrano",
+    "photo": "stu2.jpeg",
+    "description": "Ho Ho Ho Ho Ho Ho HO",
+    "option": "dwt",
+    "fb": "fb",
+    "inst": "instagram",
+    "linkedin": "lk",
+    "artstation": "artstation",
+    "site": "https://justin.willemet.be",
+    "autres": ""
+  },
+  {
+    "id": 6,
+    "nom": "Pina Vetrano",
+    "photo": "stu2.jpeg",
+    "description": "Ho Ho Ho Ho Ho Ho HO",
+    "option": "dwt",
+    "fb": "fb",
+    "inst": "instagram",
+    "linkedin": "lk",
+    "artstation": "artstation",
+    "site": "https://justin.willemet.be",
+    "autres": ""
   }
 ]
