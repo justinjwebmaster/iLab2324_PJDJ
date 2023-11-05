@@ -1,7 +1,6 @@
 {% extends 'base.twig' %}
 
 {% block head__scripts %}
-  <!-- Mettez ceci dans la section <head> de votre document HTML -->
   <script src="https://www.youtube.com/iframe_api"></script>
 
   <script>
@@ -138,23 +137,22 @@
     </div>
 
     <!-- Auteurs -->
-    <h3 class=""> Auteurs </h3>
-    <div class="auteur">
-      {% for student in allCurrentStudents %}
-        {% include 'partials/auteurCard.twig' %}
-      {% endfor %}
+    <div class="projectContent__content">
+      <h3 class=""> Auteurs </h3>
+      <div class="auteur">
+        {% for student in allCurrentStudents %}
+          {% include 'partials/auteurCard.twig' %}
+        {% endfor %}
+      </div>
     </div>
 
-    <h3 class="title title--small grid__projet--marg">Projets smilaires</h3>
-    <div class="liste">
-      {% include 'partials/projetSimilaire.twig' %}
+    <div class="projectContent__content">
+      <h3 class="">Projets smilaires</h3>
+      <div class="liste">
+        {% include 'partials/projetSimilaire.twig' %}
+      </div>
     </div>
   </section>
-
-
-<div class="btn__backHome grid__projet--marg">
-  <a href="listing.php" class="btn ">Retour à la HOME</a>
-</div>
 
 {% endblock %}
 

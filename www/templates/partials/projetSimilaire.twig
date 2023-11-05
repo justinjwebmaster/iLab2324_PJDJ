@@ -1,27 +1,11 @@
+<div class="container">
+  <div class="grid listing listing--sim">
+  {% for projet in projetsSim %}
 
-
-
-
-  
-  <div class="">
-
-    {% for projet in projetsSim %}
-
-      {% for real in students %}
-
-        {% if real.id == projet.etudiants %}
-
-          {% set realisateur = real.nom %}
-
+          {% set pattern = "one-col" %}
           {% include 'partials/projectCard.twig' %}
 
-        {% endif %}
-
-      {% endfor %}
-
     {% endfor %}
-
-
-
   </div>
+</div>
 

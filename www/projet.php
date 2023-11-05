@@ -34,9 +34,21 @@ foreach ($projets as $projet) {
 // Récupérer les projets similaires (même option)
 $projetsSim = [];
 foreach($projets as $projetSim) {
-  if($projetSim['option'] == $display['option'] && $projetSim['id'] != $projetId) {
+  if ($projetSim['option'] == $display['option'] && $projetSim['id'] != $projetId) {
+    $desiredIds = explode(',', $projetSim['etudiants']);
+    $filteredStudents = [];
+
+    foreach ($students as $student) {
+      if (in_array($student['id'], $desiredIds)) {
+        $filteredStudents[] = $student;
+      }
+    }
+
+    $projetSim['filteredStudents'] = $filteredStudents;
     $projetsSim[] = $projetSim;
+
   }
+
 }
 
 // Récupérer les étudiants du projet présent dans le json

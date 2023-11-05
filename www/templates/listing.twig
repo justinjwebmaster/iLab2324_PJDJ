@@ -6,6 +6,10 @@
 
 {% endblock %}
 
+{% block body__class %}
+body__listing
+{% endblock %}
+
 
 
 {% block content__header %}
@@ -24,6 +28,8 @@
   <div class="grid listing">
 
     {% for projet in projets %}
+
+      {% set pattern = projet.pattern %}
 
       {% include 'partials/projectCard.twig' %}
 
