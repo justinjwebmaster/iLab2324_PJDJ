@@ -68,20 +68,20 @@
 
 
 
-<h3 class="title title--small grid__projet--marg"> Auteurs </h3>
+<h3 class="title title--small projet--marg marg--botton"> Auteurs </h3>
 <ul class="liste">
   {% for student in allCurrentStudents %}
     {% include 'partials/auteurCard.twig' %}
   {% endfor %}
 </ul>
 
-<h3 class="title title--small grid__projet--marg">Projets smilaires</h3>
+<h3 class="title title--small projet--marg marg--botton">Projets smilaires</h3>
 <ul class="liste">
   {% include 'partials/projetSimilaire.twig' %}
 </ul>
 
 
-<div class="btn__backHome grid__projet--marg">
+<div class="btn__backHome projet--marg">
   <a href="listing.php" class="btn ">Retour à la HOME</a>
 </div>
 

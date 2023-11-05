@@ -63,7 +63,7 @@ $qrImageUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" .
 $template = $twig->load('projets.twig');
 
 $tpl_data = [
-  'title' => 'Test listing projet',
+  'title' => 'Projets',
   'lang' => $lang,
   'projet' => $display,
   // 'studentName' => $studentName,

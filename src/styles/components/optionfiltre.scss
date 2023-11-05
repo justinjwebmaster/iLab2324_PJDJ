@@ -1,0 +1,49 @@
+/*--------------------------- form FILTER-----------------*/
+
+
+/* Cache la case à cocher réelle */
+.hidden-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  
+  }
+  
+  /* Style du bouton */
+  .custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333232;
+    color: #f45d01;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 6px;
+    border: 2px solid #F45D01;
+  }
+  
+  .custom-button:hover {
+    background-color: #a27953;
+  }
+  
+  /* Changez l'apparence du bouton lorsque la case à cocher est cochée */
+  .hidden-checkbox:checked + .custom-button {
+    background-color: #5d1010;
+  }
+  
+  .formFilter{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 90px;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  }
+

@@ -1,0 +1,55 @@
+/*---------------------------Auteur(s)-----------------*/
+
+// liste des auteurs
+
+.liste{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.container__auteur {
+    width: 27%;
+    background-color: #f1f1f1;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    margin: 50px 0 0 50px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+}
+
+.image__auteur {
+    width: 120px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 65px;
+    height: auto;
+    border-radius: 50%;
+
+    img{
+        height: auto;
+        border-radius: 50%;
+    }
+}
+
+.nom__auteur {
+    margin-top: -32px;
+}
+
+.text__auteur {
+    margin: 10px 0;
+}
+
+.container__qrCode {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: 0 auto;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}

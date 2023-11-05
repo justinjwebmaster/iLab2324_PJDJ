@@ -1,0 +1,36 @@
+/*---------------------------style projet-----------------*/
+
+
+.image__projets{
+    height: 100%;
+    border-radius: 20px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+
+.relative {
+    position: relative;
+    height: 380px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.nom__projet {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+    color: white;
+    padding: 40px 20px 14px 20px;
+    z-index: 100;
+}
+
+.marg--botton{
+    margin-bottom: 15px;
+}

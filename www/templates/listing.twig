@@ -10,7 +10,7 @@
 
 {% block content__header %}
 <div class="icone__botBienvenue">
-<img src="assets/images/description_bot.png" alt="icone bot bienvenue" srcset="">
+<img class="animme__noid" src="assets/images/icone-bot-bienvenue.png" alt="icone bot bienvenue" >
 </div>
 <div class="bulle__message bg-blue-500 ">
   Salut, moi c’est <span class="nom__bot title"> NO-ID </span>
@@ -20,7 +20,7 @@
 
 
 {% block content %}
-  <h1 class="title title--big">{{ title }}</h1>
+  <h1 class="title title--big title--marg ">{{ title }}</h1>
 <div class="container ">
   <div class="grid ">
 
@@ -33,11 +33,15 @@
   </div>
 </div>
 
-  <form action="/listing.php" method="GET" name="formFilter" id="formFilter">
+
+<div class="filter">
+  <form action="/listing.php" method="GET" name="formFilter" class="formFilter" id="formFilter">
     {% for option in options %}
       {% include 'partials/optionFilter.twig' %}
     {% endfor %}
   </form>
+</div>
+
 
 
 

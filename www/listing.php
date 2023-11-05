@@ -48,7 +48,7 @@ foreach ($projets as $projet) {
 }
 
 $tpl_data = [
-  'title' => 'Test listing projet',
+  'title' => 'Liste des Projets de la HEAJ',
   'lang' => $lang,
   'projets' => $filteredProjets,  // Changez cette ligne pour utiliser $filteredProjets
   'filteredStudents' => $filteredStudents,

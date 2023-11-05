@@ -1,0 +1,66 @@
+/*--------------------------- cadre visibilité projet: projet choisi-----------------*/
+
+
+
+
+.btn {
+    background-color: #F45D01;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    padding: 9px;
+    border-style: none;
+    border-radius: 10px;
+    text-decoration: none;
+
+}
+
+
+
+
+.btn__retour {
+    position: absolute;
+    top: 0;
+    width: 10%;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0 0 10px;
+
+}
+
+.btn__play {
+    width: 7%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    border-style: none;
+}
+
+// video
+
+.container__video{
+    width: 98%;
+    position: absolute;
+    top: 76px;
+    height: 400px;
+    border-radius: 11px;
+    display: none; // pour le moment en display none
+}
+
+.btn__backHome {
+    padding: 30px;
+
+
+    a {
+        position: absolute;
+        left: 44%;
+    }
+
+}
+
+
+
+
+

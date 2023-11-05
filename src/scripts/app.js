@@ -10,3 +10,10 @@ checkboxes.forEach(function(checkbox) {
     document.getElementById('formFilter').submit();
   });
 });
+
+
+
+// afficher l'année dans le footer
+
+var annee = new Date().getFullYear();
+document.querySelector(".annee").innerHTML = annee;

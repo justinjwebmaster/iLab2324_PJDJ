@@ -9,24 +9,25 @@
 
 {%  block content %}
 
-  <img src="datas/etudiantsImage/{{ student.photo }}" alt="{{ student.nom }}">
+  <img class="image__auteur " src="datas/etudiantsImage/{{ student.photo }}" alt="{{ student.nom }}">
 
-  <h1>{{ student.nom }}</h1>
-  <h2>{{ studentOption.nom }}</h2>
+  <h1 class="title title--big ">{{ student.nom }}</h1>
+  <h2 class="title title--medium student--marg">{{ studentOption.nom }}</h2>
 
-  <p> {{ student.description }}</p>
+  <p class="student--marg"> {{ student.description }}</p>
 
-  <a href="{{ student.site }}">{{ student.site }}</a>
-  <br>
-  <a href="{{ student.fb }}">{{ student.fb }}</a>
-  <br>
-  <a href="{{ student.linkedin }}">{{ student.linkedin }}</a>
-  <br>
-  <a href="{{ student.inst }}">{{ student.inst }}</a>
-  <br>
-  <a href="{{ student.artstation }}">{{ student.artstation }}</a>
-  <br>
-  <a href="{{ student.autres }}">{{ student.autres }}</a>
+  <ul class="liste__reseau">
+    <li class="reseau__el ">
+      <a href="{{ student.site }}">{{ student.site }}</a>
+    </li>
+    <li class="reseau__el "><a href="{{ student.fb }}">{{ student.fb }}</a></li>
+    <li class="reseau__el "><a href="{{ student.linkedin }}">{{ student.linkedin }}</a></li>
+    <li class="reseau__el "><a href="{{ student.inst }}">{{ student.inst }}</a></li>
+    <li class="reseau__el "><a href="{{ student.artstation }}">{{ student.artstation }}</a></li>
+    <li class="reseau__el "><a href="{{ student.autres }}">{{ student.autres }}</a></li>
+  </ul>
+  
+  
 
 
 {% endblock %}

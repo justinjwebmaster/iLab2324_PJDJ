@@ -1,0 +1,80 @@
+/*---------------------------Annimation de NO-ID-----------------*/
+
+
+@keyframes flotteNoid {
+
+
+    0% {
+        transform: translateY(-10%);
+       
+      }
+    
+      50% {
+        transform: translateY(10%);
+        
+        
+      }
+
+      100% {
+        transform: translateY(-10%);
+        
+        
+      }
+
+}
+
+
+.animme__noid{
+    animation: flotteNoid 3s forwards infinite;
+}
+
+
+// description projet
+
+@keyframes presentationNoid {
+
+
+    0% {
+        transform: translateX(-100%);
+       opacity: 0;
+      }
+
+
+      100% {
+        transform: translateX(0%);
+        opacity: 1;
+        
+      }
+
+}
+
+
+.animmePresentation__noid{
+    animation: presentationNoid 3s forwards;
+}
+
+
+// anime block contenant noid
+
+
+@keyframes blockanime{
+
+
+  0% {
+     
+     opacity: 0;
+    }
+
+
+    100% {
+      
+      opacity: 1;
+      
+    }
+
+}
+
+
+.blockanime{
+  animation: blockanime 3s forwards;
+}

@@ -18,8 +18,20 @@
     "logo": ""
   },
   {
-    "id": "medea",
-    "nom": "Je sais plus",
+    "id": "commun",
+    "nom": "Communication graphique et publicitaire",
+    "site": "",
+    "logo": ""
+  },
+  {
+    "id": "im",
+    "nom": "Image réelle",
+    "site": "",
+    "logo": ""
+  },
+  {
+    "id": "ve",
+    "nom": "Visual effect 3D",
     "site": "",
     "logo": ""
   }
