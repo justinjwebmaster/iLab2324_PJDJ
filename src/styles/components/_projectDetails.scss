@@ -99,11 +99,7 @@
   z-index: 120;
   margin-top: -60px;
 
-  &--flex{
-    display: flex;
-    justify-content: flex-start;
-    align-items: start;
-  }
+
 
 
   &__content{
@@ -112,9 +108,7 @@
     flex-grow: 0;
     width: 100%;
 
-    &--middle{
-      width: 50%;
-    }
+
 
     &:last-child{
       margin-bottom: 0;
