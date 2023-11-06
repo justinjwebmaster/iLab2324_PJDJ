@@ -122,7 +122,7 @@ while ($index < $count) {
   }
 }
 
-
+$projetsSimLenght = count($projetsSim);
 
 $template = $twig->load('projets.twig');
 
@@ -142,6 +142,7 @@ $tpl_data = [
   'allCurrentStudents' => $studentDisplay,
   'options' => $options,
   'images' => $images,
+  'projetsSimLenght' => $projetsSimLenght,
 ];
 
 //var_dump($studentDisplay);

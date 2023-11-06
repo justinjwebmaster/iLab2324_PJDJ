@@ -147,12 +147,14 @@
       </div>
     </div>
 
+    {% if projetsSimLenght > 0 %}
     <div class="projectContent__content">
       <h3 class="">Projets smilaires</h3>
       <div class="liste">
         {% include 'partials/projetSimilaire.twig' %}
       </div>
     </div>
+    {% endif %}
   </section>
 
 {% endblock %}
