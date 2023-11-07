@@ -1,0 +1,29 @@
+header{
+  .bot{
+    margin: 30px auto 30px auto;
+  }
+}
+
+/*---------------------------Annimation de NO-ID-----------------*/
+
+
+@keyframes flotteNoid {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+.animme__noid{
+  animation: flotteNoid 3.6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  width: 120px;
+}
+
+

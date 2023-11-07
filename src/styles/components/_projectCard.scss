@@ -1,0 +1,60 @@
+.listing{
+  padding: 0 30px 30px 30px;
+
+  &--sim{
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .projectCard{
+    position: relative;
+    height: 380px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+
+    &__img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -10;
+    }
+  }
+
+  .projectContent{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(00, 0, 0, 1));
+    color: white;
+    padding: 40px 20px 14px 20px;
+    z-index: 100;
+
+    &__title{
+      font-size: 48px;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 100%;
+    }
+
+    &__reals{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: center;
+      font-size: 24px;
+      line-height: 140%;
+    }
+
+    &__option{
+      color: #F45D01;
+      font-weight: 900;
+    }
+  }
+}
+
+

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "dwt",
+    "nom": "Design Web & Transmédia",
+    "site": "",
+    "logo": ""
+  },
+  {
+    "id": "jv",
+    "nom": "Jeux Vidéo",
+    "site": "",
+    "logo": ""
+  },
+  {
+    "id": "anim3d",
+    "nom": "Animation 3D",
+    "site": "",
+    "logo": ""
+  },
+  {
+    "id": "commun",
+    "nom": "Communication graphique et publicitaire",
+    "site": "",
+    "logo": ""
+  },
+  {
+    "id": "im",
+    "nom": "Image réelle",
+    "site": "",
+    "logo": ""
+  },
+  {
+    "id": "ve",
+    "nom": "Visual effect 3D",
+    "site": "",
+    "logo": ""
+  }
+]

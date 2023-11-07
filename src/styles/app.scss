@@ -1,0 +1,32 @@
+@import 'utils/variables';
+@import 'components/type';
+@import 'components/projectCard';
+@import 'components/filter';
+@import 'components/projectDetails';
+@import 'components/bot';
+@import 'components/grid';
+@import 'components/auteurCard';
+@import 'components/listingBot';
+@import 'components/student';
+@import '../../node_modules/modern-normalize/modern-normalize.css';
+
+
+body{
+    // background-image: url(../images/backgroundTopo.svg);
+    // background-size: cover;
+    background-color: #FAFAFA;
+    font-size: 28px;
+}
+.footerText{
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 100%;
+  padding: 30px;
+  color: #F45D01;
+}
+
+
+
+
+

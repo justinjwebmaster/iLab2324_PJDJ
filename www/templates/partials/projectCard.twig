@@ -1,0 +1,28 @@
+<a class="relative projectCard {{ pattern }}" href="projet.php?id={{ projet.id }}">
+  <img class="projectCard__img image__projets" src="datas/{{ lang }}/img/{{ projet.imgCard }}" alt="Background Image">
+
+
+  <div class="nom__projet projectContent">
+    <h2 class="projectContent__title">{{ projet.nom }}</h2>
+    <p class="projectContent__reals"><!-- <span>Réalisé par : </span> -->
+      <span>Par </span>
+
+      {% for student in projet.filteredStudents %}
+        {% if loop.last %}
+          <span> {{ student.nom }}</span>
+        {% else %}
+          <span>{{ student.nom }} & </span>
+        {% endif %}
+      {% endfor %}
+
+      <span> </span>
+
+      {% for option in options %}
+        {% if option.id == projet.option %}
+          <span class="projectContent__option">{{ option.nom }} </span>
+        {% endif %}
+      {% endfor %}
+    </p>
+  </div>
+</a>
+
