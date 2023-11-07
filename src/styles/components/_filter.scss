@@ -87,13 +87,8 @@
     font-weight: 600;
   }
 
-  .custom-button:hover {
-    background-color: #F45D01;
-    color: #333232;
-  }
-
   /* Changez l'apparence du bouton lorsque la case à cocher est cochée */
-  .hidden-checkbox:checked + .custom-button {
+  .hidden-checkbox:checked ~ .custom-button {
     background-color: #F45D01;
     color: #333232;
   }
