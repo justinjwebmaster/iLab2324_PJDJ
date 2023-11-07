@@ -70,13 +70,17 @@ while ($index < $count) {
   }
 }
 
+$message = "Salut, moi c’est <span class='nom__bot title'>NO-ID</span> Touche un projet et je t’apprendrai tout ce dont tu as besoin de savoir !";
+
+
 $tpl_data = [
   'title' => 'Test listing projet',
   'lang' => $lang,
   'projets' => $filteredProjets,
   'filteredStudents' => $filteredStudents,
   'options' => $options,
-  'selectedTypes' => $selectedTypes
+  'selectedTypes' => $selectedTypes,
+  "messageHeader" => $message,
 ];
 
 echo $template->render($tpl_data);

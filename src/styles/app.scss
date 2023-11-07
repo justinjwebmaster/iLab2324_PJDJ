@@ -6,13 +6,14 @@
 @import 'components/bot';
 @import 'components/grid';
 @import 'components/auteurCard';
+@import 'components/listingBot';
 @import '../../node_modules/modern-normalize/modern-normalize.css';
 
 
 body{
     // background-image: url(../images/backgroundTopo.svg);
     // background-size: cover;
-    background-color: rgba(0, 0, 0, 0.005);
+    background-color: #FAFAFA;
     font-size: 28px;
 }
 .body__listing{
