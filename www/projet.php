@@ -31,9 +31,11 @@ foreach ($projets as $projet) {
   }
 }
 
-// Récupérer les projets similaires (même option)
+// Récupérer les projets similaires (même option) (max 3)
 $projetsSim = [];
-foreach($projets as $projetSim) {
+$compteur = 0; // Initialisez le compteur de projets
+
+foreach ($projets as $projetSim) {
   if ($projetSim['option'] == $display['option'] && $projetSim['id'] != $projetId) {
     $desiredIds = explode(',', $projetSim['etudiants']);
     $filteredStudents = [];
@@ -46,10 +48,15 @@ foreach($projets as $projetSim) {
 
     $projetSim['filteredStudents'] = $filteredStudents;
     $projetsSim[] = $projetSim;
+    $compteur++; // Incrémentez le compteur pour chaque projet ajouté
 
+    // Vérifiez si le compteur a atteint la limite de 3
+    if ($compteur >= 3) {
+      break; // Sortez de la boucle si 3 projets ont été ajoutés
+    }
   }
-
 }
+
 
 // Récupérer les étudiants du projet présent dans le json
 $allStudentProjet = explode(',', $display['etudiants']);
