@@ -104,7 +104,7 @@
   <!-- Project Content -->
   <section class="projectContent">
     <!-- DEscription + info supp -->
-    <div class="projectContent--flex">
+    <div class="">
       {% if botMessage['description'] != null %}
         <div class="projectContent__content projectContent__content--middle">
           <h3 class="projectContent__title ">Description du projet</h3>
@@ -147,12 +147,14 @@
       </div>
     </div>
 
+    {% if projetsSimLenght > 0 %}
     <div class="projectContent__content">
       <h3 class="">Projets smilaires</h3>
       <div class="liste">
         {% include 'partials/projetSimilaire.twig' %}
       </div>
     </div>
+    {% endif %}
   </section>
 
 {% endblock %}

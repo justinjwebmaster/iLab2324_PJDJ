@@ -6,6 +6,12 @@
 
 {% endblock %}
 
+
+{% block head__scripts %}
+  <script src="assets/scripts/app.js" defer></script>
+{% endblock %}
+
+
 {% block body__class %}
 body__listing
 {% endblock %}
@@ -13,13 +19,7 @@ body__listing
 
 
 {% block content__header %}
-<div class="icone__botBienvenue">
-<img src="assets/images/description_bot.png" alt="icone bot bienvenue" srcset="">
-</div>
-<div class="bulle__message">
-  Salut, moi c’est <span class="nom__bot title"> NO-ID </span>
-  Touche un projet et je t’apprendrai tout ce dont tu as besoin de savoir !
-</div>
+  {% include 'partials/botHeader.twig' %}
 {% endblock %}
 
 
@@ -39,7 +39,9 @@ body__listing
 </div>
 
 <div class="filters">
-  <form action="/listing.php" method="GET" name="formFilter" id="formFilter" class="filters__form">
+  <button class="filters__btn">Filtres</button>
+  <form action="listing.php" method="GET" name="formFilter" id="formFilter" class="filters__form filters__form--hidden">
+    <button class="filters__btn filters__btn--close" type="submit">Fermer</button>
     {% for option in options %}
       {% include 'partials/optionFilter.twig' %}
     {% endfor %}
