@@ -1,6 +1,6 @@
 .projectBanner{
   width: 100%;
-  height: 50vh;
+  height: 550px;
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -20,6 +20,7 @@
     transform: translate(-50%, -50%);
     width: 200px;
     height: auto;
+    z-index: 1000;
   }
 
   &__btn{
