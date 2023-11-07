@@ -8,26 +8,55 @@
 
 
 {%  block content %}
+  <section class="student">
+    <div class="student__container">
+      <img src="datas/etudiantsImage/{{ student.photo }}" alt="{{ student.nom }}" class="student__item student__img ">
 
-  <img src="datas/etudiantsImage/{{ student.photo }}" alt="{{ student.nom }}">
+      <h1 class="student__item student__item--name">{{ student.nom }}</h1>
+      <h2 class="student__item student__item--option">{{ studentOption.nom }}</h2>
 
-  <h1>{{ student.nom }}</h1>
-  <h2>{{ studentOption.nom }}</h2>
+      <p class="student__item">{{ student.description }}</p>
 
-  <p> {{ student.description }}</p>
+      <div class="student__reseaux student__item">
+        {% if student.site != "" %}
+          {% set link = student.site %}
+          {% set nomLink = "Mon site" %}
+          {% include 'partials/studentLink.twig' %}
+        {% endif %}
 
-  <a href="{{ student.site }}">{{ student.site }}</a>
-  <br>
-  <a href="{{ student.fb }}">{{ student.fb }}</a>
-  <br>
-  <a href="{{ student.linkedin }}">{{ student.linkedin }}</a>
-  <br>
-  <a href="{{ student.inst }}">{{ student.inst }}</a>
-  <br>
-  <a href="{{ student.artstation }}">{{ student.artstation }}</a>
-  <br>
-  <a href="{{ student.autres }}">{{ student.autres }}</a>
+        {% if student.fb != "" %}
+          {% set link = student.fb %}
+          {% set nomLink = "Facebook" %}
+          {% include 'partials/studentLink.twig' %}
+        {% endif %}
 
+        {% if student.linkedin != "" %}
+          {% set link = student.linkedin %}
+          {% set nomLink = "LinkedIn" %}
+          {% include 'partials/studentLink.twig' %}
+        {% endif %}
+
+        {% if student.inst != "" %}
+          {% set link = student.inst %}
+          {% set nomLink = "Instagram" %}
+          {% include 'partials/studentLink.twig' %}
+        {% endif %}
+
+        {% if student.artstation != "" %}
+          {% set link = student.artstation %}
+          {% set nomLink = "Artstation" %}
+          {% include 'partials/studentLink.twig' %}
+        {% endif %}
+
+        {% if student.autres != "" %}
+          {% set link = student.autres %}
+          {% set nomLink = student.autres %}
+          {% include 'partials/studentLink.twig' %}
+        {% endif %}
+      </div>
+
+    </div>
+  </section>
 
 {% endblock %}
 
