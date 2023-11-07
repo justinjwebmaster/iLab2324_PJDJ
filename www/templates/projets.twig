@@ -138,7 +138,7 @@
     </div>
 
     <!-- Auteurs -->
-    <div class="projectContent__content">
+    <div class="projectContent__content {% if projetsSimLenght == 0 %}projectContent__content--last{% endif%}">
       <h3 class=""> Auteurs </h3>
       <div class="auteur">
         {% for student in allCurrentStudents %}
@@ -148,7 +148,7 @@
     </div>
 
     {% if projetsSimLenght > 0 %}
-    <div class="projectContent__content">
+    <div class="projectContent__content projectContent__content--last">
       <h3 class="">Projets smilaires</h3>
       <div class="liste">
         {% include 'partials/projetSimilaire.twig' %}

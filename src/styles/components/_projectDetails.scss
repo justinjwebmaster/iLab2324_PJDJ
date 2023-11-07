@@ -108,7 +108,9 @@
     flex-grow: 0;
     width: 100%;
 
-
+    &--last{
+      margin-bottom: 0;
+    }
 
   }
 
