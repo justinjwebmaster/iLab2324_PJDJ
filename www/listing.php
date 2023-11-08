@@ -74,7 +74,7 @@ $message = "Salut, moi c’est <span class='nom__bot title'>NO-ID</span> Touche 
 
 
 $tpl_data = [
-  'title' => 'listing projet',
+  'title' => "Projets d'étudiants - HEAJ",
   'lang' => $lang,
   'projets' => $filteredProjets,
   'filteredStudents' => $filteredStudents,
