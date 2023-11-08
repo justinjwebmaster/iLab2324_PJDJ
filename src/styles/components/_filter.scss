@@ -11,7 +11,7 @@
     z-index: 100;
     gap: 20px;
     background-color: #333232;
-    padding: 30px 20px;
+    padding: 40px 20px 30px 20px;
     border-radius: 20px;
     transition: all 0.3s ease-in-out;
 
@@ -44,11 +44,6 @@
       position: absolute;
       top: -30px;
       height: fit-content;
-
-      &::after {
-        content: url('images/close.svg');
-        width: 40px;
-      }
     }
 
     &--hidden{
